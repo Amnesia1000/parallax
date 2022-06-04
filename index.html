@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Parallax Background Test</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">EVDLT</a>
+        <ul>
+            <li><a href="#" class="active">Inicio</a></li>
+            <li><a href="#story">Relato</a></li>
+            <li><a href="#watchman">Vigia</a></li>
+            <li><a href="#tower">Torre</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="sky.png" id="sky">
+        <img src="stars.png" id="stars">
+        <img src="mountain1.png" id="mountain1">
+        <img src="mountain2.png" id="mountain2">
+        <img src="mountain3.png" id="mountain3">
+    </section>
+    <div class="story" id="story">
+        <h2>El Vigia de la torre.</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora culpa, mollitia maiores harum, praesentium et voluptatem ratione error, voluptatibus rem omnis. Ad eligendi doloremque eum pariatur, debitis nesciunt impedit consequuntur!</p><br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quod blanditiis corrupti error? Sint modi blanditiis dolores voluptatibus officia unde molestias cum distinctio deserunt quae, quibusdam illum odio. Mollitia fugiat eaque, quam ipsam cupiditate itaque autem qui quaerat! Alias neque iusto totam quibusdam numquam quia reiciendis eum, consequatur, temporibus excepturi hic enim a veniam assumenda cum id quasi? Numquam cumque officiis, ipsam labore repudiandae eligendi laborum quos distinctio fugiat esse ab soluta quas ut, id suscipit atque fugit officia! Neque quam laborum non corporis iure cumque dolorum sed velit, illum nobis recusandae est eos dolor, voluptates alias eum molestiae doloremque!</p>
+    </div>
+    <div class="watchman" id="watchman">
+        <h2>El Vigia.</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora culpa, mollitia maiores harum, praesentium et voluptatem ratione error, voluptatibus rem omnis. Ad eligendi doloremque eum pariatur, debitis nesciunt impedit consequuntur!</p><br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quod blanditiis corrupti error? Sint modi blanditiis dolores voluptatibus officia unde molestias cum distinctio deserunt quae, quibusdam illum odio. Mollitia fugiat eaque, quam ipsam cupiditate itaque autem qui quaerat! Alias neque iusto totam quibusdam numquam quia reiciendis eum, consequatur, temporibus excepturi hic enim a veniam assumenda cum id quasi? Numquam cumque officiis, ipsam labore repudiandae eligendi laborum quos distinctio fugiat esse ab soluta quas ut, id suscipit atque fugit officia! Neque quam laborum non corporis iure cumque dolorum sed velit, illum nobis recusandae est eos dolor, voluptates alias eum molestiae doloremque!</p>
+    </div>
+    <div class="tower" id="tower">
+        <h2>La torre.</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora culpa, mollitia maiores harum, praesentium et voluptatem ratione error, voluptatibus rem omnis. Ad eligendi doloremque eum pariatur, debitis nesciunt impedit consequuntur!</p><br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quod blanditiis corrupti error? Sint modi blanditiis dolores voluptatibus officia unde molestias cum distinctio deserunt quae, quibusdam illum odio. Mollitia fugiat eaque, quam ipsam cupiditate itaque autem qui quaerat! Alias neque iusto totam quibusdam numquam quia reiciendis eum, consequatur, temporibus excepturi hic enim a veniam assumenda cum id quasi? Numquam cumque officiis, ipsam labore repudiandae eligendi laborum quos distinctio fugiat esse ab soluta quas ut, id suscipit atque fugit officia! Neque quam laborum non corporis iure cumque dolorum sed velit, illum nobis recusandae est eos dolor, voluptates alias eum molestiae doloremque!</p>
+    </div>
+    <script>
+        let stars = document.getElementById('stars');
+        let sky = document.getElementById('sky');
+        let mountain1 = document.getElementById('mountain1');
+        let mountain2 = document.getElementById('mountain2');
+        let mountain3 = document.getElementById('mountain3');
+
+        window.addEventListener('scroll', function() {
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            sky.style.top = value * 0.75 + 'px';
+            mountain1.style.top = value * 0.50 + 'px';
+            mountain2.style.top = value * 0.25 + 'px';
+            mountain3.style.top = value * 0 + 'px';
+        })
+    </script>
+</body>
+</html>
