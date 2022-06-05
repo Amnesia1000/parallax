@@ -83,6 +83,10 @@ section img {
     object-fit: cover;
 }
 
+section img#stars {
+    mix-blend-mode: screen;
+}
+
 .story {
     position: relative;
     padding: 100px;
